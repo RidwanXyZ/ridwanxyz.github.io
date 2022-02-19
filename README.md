@@ -1,7 +1,7 @@
 <h1 align="center">Hi 👋, I'm Ridwan</h1>
 <h3 align="center">I am a high school student</h3>
 
-https://komarev.com/ghpvc/?username=ridwanxyz&label=Profile%20views&color=0e75b6&style=flat" alt="ridwanxyz" />
+<img src="https://komarev.com/ghpvc/?username=ridwanxyz&label=Profile%20views&color=0e75b6&style=flat" alt="ridwanxyz" />
 
 
 
