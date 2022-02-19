@@ -65,7 +65,7 @@ const na_Pe = prompt("Hai, silahkan input nama anda!")
 <img class="img-thumbnail rounded-circle" src="Marin.jpg" alt="Istri Ridwan:v" width="50%" style="margin-top: 20px"/>
 <h1 class="display-4" style="margin-top: 30px">Akitagawa Marin</h1>
 <p class="lead">Cosplayer | Student | Single.</p>
-<audio width="auto" controls autoplay="true" style="display: none;">
+<audio id="aud" width="auto" controls autoplay="true" style="display: none;">
 <source src="nanatsu.mp3" type="audio/mp3" media="" />
 </audio>
 </div>
@@ -137,6 +137,11 @@ if (curHr >= 0 && curHr < 6) {
   alert(`Selamat Malam ${na_Pe.charAt(0).toUpperCase()}${na_Pe.slice(1)}!`);
 }
 
+function play(){
+  musik = document.getElementById("aud");
+  musik.autoplay = true;
+  musik.load();
+}
 </script>
 </div>
 <!--Akhir Jam-->
