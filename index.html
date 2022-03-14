@@ -65,7 +65,7 @@ const na_Pe = prompt("Hai, silahkan input nama anda!")
 <img class="img-thumbnail rounded-circle" src="Marin.jpg" alt="Istri Ridwan:v" width="50%" style="margin-top: 20px"/>
 <h1 class="display-4" style="margin-top: 30px">Akitagawa Marin</h1>
 <p class="lead">Cosplayer | Student | Single.</p>
-<h3>Project Terbaru <a href="njir/index.html">Kalkulator</a></h3>
+<h3>Project Terbaru <a href="./njir/index.html">Kalkulator</a></h3>
 <audio id="aud" width="auto" controls autoplay="true" style="display: none;">
 <source src="nanatsu.mp3" type="audio/mp3" media="" />
 </audio>
@@ -91,23 +91,39 @@ const na_Pe = prompt("Hai, silahkan input nama anda!")
 <!--kontak kami-->
 <div id="kontak">
   <div class="container-fluid">
-    <form class="" name="kontakMe" method="POST" accept-charset="utf-8" action="https://formspree.io/f/mrgjlbwe">
-      
-      <div class="mb-3">
-    <label for="exampleInputEmail1" class="form-label">Email:</label>
-    <input name="email" type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-    <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+    <form class="needs-validated" name="kontakMe" method="POST" accept-charset="utf-8" action="https://formspree.io/f/mrgjlbwe">
+       <!--Nama-->
+       <div class="col-md-4 position-relative">
+    <label for="validationTooltip01" class="form-label">Nama bang?</label>
+    <input type="text" class="form-control" id="validationTooltip01" placeholder="Mark" name="Nama" required>
+    <div class="valid-tooltip">
+  Nah gitu bang
+    </div>
+       <!---Akhir nama-->
+        
+        <!---telpon-->
+        <div class="col-md-3 position-relative">
+    <label for="validationTooltip05" class="form-label">WhatsApp</label></label>
+    <input type="tel" class="form-control" id="validationTooltip05" pattern="^(\+62|62|0)8[1-9][0-9]{6,9}$" name="wa" value="62" required>
+    <div class="invalid-tooltip">
+      Masukkan nomor WA aktif!
+    </div>
   </div>
-  
-  <div class="mb-3">
-  <label for="exampleFormControlTextarea1" class="form-label">Masukkan Pesan Anda!</label>
-  <div><label>Isikan pesan anda</label>
-    <textarea name="Pesan" id="" cols="30" rows="10" placeholder="Isikan pesan anda anjg"></textarea>
+        <!---Akhir telpon-->
+        
+        <!--Pesan-->
+        <div class="mb-3">
+    <label for="validationTextarea" class="form-label">Pesan</label>
+    <textarea class="form-control is-invalid" id="validationTextarea" placeholder="Ketikkan pesan anda untuk Ridwan disini" name="Pesan" required></textarea>
+    <div class="invalid-feedback">
+      Ketikkan pesan anda dengan benar.
+    </div>
   </div>
-</div>
-
-<button type="submit" class="btn btn-info">Info</button>
-
+        <!---Akhir pesan-->
+        
+  <div class="mb-3 text-end">
+    <button class="btn btn-primary" type="submit">Kirim</button>
+  </div>
     </form>
   </div>
 </div>
@@ -120,6 +136,14 @@ const na_Pe = prompt("Hai, silahkan input nama anda!")
 <script src="https://cdn.jsdelivr.net/npm/sweetalert.js" type="text/javascript" charset="utf-8">
 </script>
 <script>
+var dokumen = document.querySelector("#kontakMe")
+
+dokumen.addEventListener('submit', function(b){
+    b.preventDefault()
+    b.reset()
+})
+
+
 window.navigator.vibrate(1000)
 var today = new Date()
 var curHr = today.getHours()
